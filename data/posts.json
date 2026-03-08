@@ -1,0 +1,30 @@
+[
+  {
+    "id": "btc-20250308",
+    "title": "Удачный лонг BTC на отскоке",
+    "date": "2025-03-08T14:30",
+    "pair": "BTCUSDT",
+    "direction": "long",
+    "entryPrice": 68250,
+    "exitPrice": 69120,
+    "volume": 1000,
+    "screenshot": "uploads/btc-20250308.png",
+    "description": "Сегодня заметил чёткий отскок от уровня 68000, объёмы росли, решил войти. Выход по ликвидности выше 69000. Риск-менеджмент сработал отлично.",
+    "tags": ["лонг", "уровни", "объёмы"]
+  },
+  {
+  "id": "eth-23190",
+  "title": "Тестовый пост",
+  "date": "2026-03-08T19:59",
+  "pair": "ETHUSDT",
+  "direction": "long",
+  "entryPrice": 0.02,
+  "exitPrice": 0.06,
+  "volume": 0.01,
+  "screenshot": "-",
+  "description": "WQEQEWQEWQ",
+  "tags": [
+    "-"
+  ]
+}
+]
