@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">🌱 Scalper Blog</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="posts.html" class="nav-link">Архив</a>
+                <a href="stats.html" class="nav-link active">Статистика</a>
+                <a href="about.html" class="nav-link">О себе</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Статистика</h1>
+        <div id="stats-cards" class="stats-grid"></div>
+
+        <div class="charts-grid">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Кривая доходности</h5>
+                    <canvas id="equityChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5>Распределение по парам</h5>
+                    <canvas id="pairsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5>Детализация по парам</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Пара</th>
+                            <th>Сделок</th>
+                            <th>Прибыльных</th>
+                            <th>Винрейт</th>
+                            <th>Суммарный %</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pairs-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">&copy; 2025 Scalper Blog</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/stats.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админка — генерация JSON</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">🌱 Scalper Blog — Admin</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">На сайт</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container admin-container">
+        <h1>➕ Добавить новый пост</h1>
+        <p class="demo-note">Заполните форму, скопируйте JSON и вставьте в файл <code>data/posts.json</code> (соблюдайте запятые).</p>
+
+        <form id="post-form">
+            <div class="form-group">
+                <label class="form-label">ID (уникальный, например btc-20250308)</label>
+                <input type="text" id="id" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Заголовок</label>
+                <input type="text" id="title" class="form-control" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">Дата и время</label>
+                    <input type="datetime-local" id="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Пара</label>
+                    <input type="text" id="pair" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Направление</label>
+                    <select id="direction" class="form-select">
+                        <option value="long">Long</option>
+                        <option value="short">Short</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">Цена входа</label>
+                    <input type="number" step="0.01" id="entryPrice" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Цена выхода</label>
+                    <input type="number" step="0.01" id="exitPrice" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Объём (USDT)</label>
+                    <input type="number" step="0.01" id="volume" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Путь к скриншоту (например uploads/btc.png)</label>
+                <input type="text" id="screenshot" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Описание сделки</label>
+                <textarea id="description" rows="6" class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Теги (через запятую)</label>
+                <input type="text" id="tags" class="form-control" placeholder="лонг, уровни, новости">
+            </div>
+            <div class="form-actions">
+                <button type="button" id="generate-btn" class="btn">Сгенерировать JSON</button>
+            </div>
+        </form>
+
+        <div class="output-section">
+            <h5>Сгенерированный JSON</h5>
+            <textarea id="json-output" rows="10" readonly></textarea>
+            <button id="copy-btn" class="btn">Копировать в буфер</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">Локальная админка — не загружать на GitHub</div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
