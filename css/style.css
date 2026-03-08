@@ -441,4 +441,130 @@ textarea {
 .demo-note {
     color: #8a9a7a;
     margin-bottom: 2rem;
+
+}
+
+/* ===== Адаптивность для планшетов и телефонов ===== */
+
+/* Для экранов уже 768px (планшеты и большие телефоны) */
+@media (max-width: 768px) {
+    /* Навигация */
+    .navbar .container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    /* Заголовки */
+    h1 {
+        font-size: 2rem;
+        margin: 1.5rem 0 0.8rem;
+    }
+
+    /* Карточки — уже адаптивны, но уменьшим внутренние отступы */
+    .card-body {
+        padding: 1rem;
+    }
+    .card-title {
+        font-size: 1.1rem;
+    }
+    .card-meta {
+        font-size: 0.75rem;
+    }
+
+    /* Фильтры на странице архива */
+    .filters {
+        grid-template-columns: 1fr; /* все фильтры в один столбец */
+        padding: 1rem;
+    }
+    .filter-group {
+        width: 100%;
+    }
+
+    /* Детали сделки на странице поста */
+    .details-grid {
+        grid-template-columns: 1fr; /* все детали в столбик */
+        gap: 1rem;
+    }
+    .post-details {
+        padding: 1.2rem;
+    }
+
+    /* Блок описания */
+    .post-description {
+        padding: 1.2rem;
+    }
+
+    /* Статистика: карточки в 2 колонки (на планшетах нормально) */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Таблица — добавим горизонтальный скролл */
+    .table-container {
+        overflow-x: auto;
+    }
+    table {
+        min-width: 600px; /* чтобы на маленьком экране появился скролл */
+    }
+
+    /* Футер */
+    .footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Для маленьких телефонов (до 480px) */
+@media (max-width: 480px) {
+    /* Ещё более компактно */
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    /* Карточки */
+    .posts-grid {
+        grid-template-columns: 1fr; /* одна колонка */
+    }
+
+    /* Статистика: карточки в одну колонку */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Кнопка "Смотреть все сделки" */
+    .view-all .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Админка (локальная) — компактные формы */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .form-control, .form-select {
+        padding: 0.5rem;
+    }
+}
+
+/* Для очень узких экранов (до 360px) */
+@media (max-width: 360px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .nav-link {
+        font-size: 0.8rem;
+    }
+    .card-img {
+        height: 150px;
+        font-size: 2rem;
+    }
 }
